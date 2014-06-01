@@ -29,11 +29,17 @@ class HelloDir
   def directory?(path)
     return false
   end
+
+  #Obtengo el tamanio del archivo
+  def size(path)
+    objeto=obtener(path)
+    objeto.size
+  end
   
   #Carga de archivos en el sistema
   def carga_archivos
-    @archivos.push(Objeto.new("hola.txt"))
-    @archivos.push(Objeto.new("contactos.txt"))
+    @archivos.push(Objeto.new("hola.txt",1024))
+    @archivos.push(Objeto.new("contactos.txt", 512))
     #@archivos.push("/sistema")
   end
 

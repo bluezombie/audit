@@ -1,10 +1,11 @@
 class Objeto
-  attr_accessor :nombre, :contenido
+  attr_accessor :nombre, :contenido, :size
 
-  def initialize(nombre)
+  def initialize(nombre, size)
     @nombre=nombre
     @directorio=false
     @contenido=""
+    @size=size
   end
 
   def esDirectorio
@@ -14,4 +15,5 @@ class Objeto
   def esDirectorio?
     return @directorio
   end 
+
 end
