@@ -2,3 +2,10 @@ El siguiente proyecto es una muestra de la utilizacion
 de la libreria FUSE sobre Ruby. El objetivo de la aplicacion
 es crear un sistema de auditoria para el registro
 de actividades sobre un filesystem.
+
+
+# Ejemplo "hello.rb"
+1) Crear un directorio "hello"
+2) Ejecutar "./hello.rb hello/ &"
+3) Acceder al directorio "hello" y ver el listado
+   de archivos, hacer un cat
