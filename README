@@ -5,7 +5,7 @@ creando un filesystem read only.
 
 
 # Ejemplo "obligatorio.rb"
-1) Crear un directorio "hello"
-2) Ejecutar "./obligatorio.rb hello/ &"
-3) Acceder al directorio "hello" y ver el listado
+1) Crear un directorio "directorio"
+2) Ejecutar "./obligatorio.rb directorio/ &"
+3) Acceder al directorio "directorio" y ver el listado
    de archivos, hacer un cat
