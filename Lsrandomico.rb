@@ -6,6 +6,7 @@ class Obligatorio
   #Constructor
   def initialize
     @archivos = []
+    @archivos_randomicos = Array.new(3){Array.new(1)}
     carga_archivos #Cargo algunos archivos en el sistema
   end
 
@@ -16,7 +17,8 @@ class Obligatorio
   def contents(path)
     logging("contents llamado con el path #{path}")
     salida = []
-    @archivos.each do |objeto|
+    randomico = rand(3)
+    @archivos_randomicos[randomico].each do |objeto|
       salida.push(objeto.nombre)
     end 
     salida
@@ -72,6 +74,25 @@ class Obligatorio
     archivo3=Objeto.new("multilinea.lst",1111,true)
     archivo3.contenido="Linea 1\nLinea 2\nLinea3\n"
     @archivos.push(archivo3)
+    @archivos_randomicos[0].push(Objeto.new("Steve_Jobs.mac",1024,false))
+    @archivos_randomicos[0].push(Objeto.new("Bill_Gates.win",666,false))
+    @archivos_randomicos[0].push(Objeto.new("Linus_Torvalds.lin",1,false))
+    @archivos_randomicos[1].push(Objeto.new("Harvey_Deitel.bk",666,false))
+    @archivos_randomicos[1].push(Objeto.new("Andrew_Tanenbaum.bk",1024,false))
+    @archivos_randomicos[1].push(Objeto.new("Abraham_Silberschatz.lin",10240,true))
+    @archivos_randomicos[2].push(Objeto.new("Intel.chip",1024,false))
+    @archivos_randomicos[2].push(Objeto.new("AMD.chip",1024,false))
+    @archivos_randomicos[0].delete_at(0)
+    @archivos_randomicos[1].delete_at(0)
+    @archivos_randomicos[2].delete_at(0)
+    @archivos.push(Objeto.new("Steve_Jobs.mac",1024,false))
+    @archivos.push(Objeto.new("Bill_Gates.win",666,false))
+    @archivos.push(Objeto.new("Linus_Torvalds.lin",1,false))
+    @archivos.push(Objeto.new("Harvey_Deitel.bk",666,false))
+    @archivos.push(Objeto.new("Andrew_Tanenbaum.bk",1024,false))
+    @archivos.push(Objeto.new("Abraham_Silberschatz.lin",10240,true))
+    @archivos.push(Objeto.new("Intel.chip",1024,false))
+    @archivos.push(Objeto.new("AMD.chip",1024,false))
   end
 
   #A partir del path pasado por la system call
